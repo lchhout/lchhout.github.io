@@ -5,4 +5,4 @@ date: 2023-12-17T17:21:05+01:00
 # bookSearchExclude: false
 ---
 
-# Blablabla
+# Recurrent Neural Network
