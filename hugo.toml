@@ -1,5 +1,4 @@
-publishDir = "Docs"
-baseURL = 'https://lchhout.github.io/blog'
+baseURL = 'https://example.org/'
 languageCode = 'en-us'
 title = 'lchhout-blog'
 theme = 'hugo-book'

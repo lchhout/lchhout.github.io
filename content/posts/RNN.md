@@ -23,7 +23,9 @@ Recurrent Neural Network is here to deal with this issue, it can deal with the s
 # Notation
 
  Inputs:
- - $\mathbf{x}^{\langle t\rangle}$ : input vector $\mathbf{x}$ at time $t$ (of dimension $n^{[0]}$ )
+ - {{</* katex [display] [class="text-center"] */>}}
+\mathbf{x}^{\langle t\rangle}$ : input vector $\mathbf{x}$ at time $t$ (of dimension $n^{[0]}
+{{</* /katex */>}}
  - $\left\{\mathbf{x}^{\langle 1\rangle}, \mathbf{x}^{\langle 2\rangle}, \ldots, \mathbf{x}^{\left\langle T_x\right\rangle}\right\}$ : a sequence of inputs of length $T_x$
  
  Outputs:
