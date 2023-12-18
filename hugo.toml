@@ -1,4 +1,4 @@
-baseURL = "https://lchhout.github.io/"
+baseURL = "https://example.com"
 languageCode = 'en-us'
 title = 'lchhout-blog'
 theme = 'hugo-book'
