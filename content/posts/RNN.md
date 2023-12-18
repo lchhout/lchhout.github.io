@@ -257,23 +257,34 @@ In RNN, at each step, we multiply the Jacobian matrix which leads to vanishing g
 
 **Vanishing gradient proof sketch (linear case)**
 - Recall:
+
+
 $$
 \boldsymbol{h}^{(t)}=\sigma\left(\boldsymbol{W}_h \boldsymbol{h}^{(t-1)}+\boldsymbol{W}_x \boldsymbol{x}^{(t)}+\boldsymbol{b}_1\right)
 $$
+
 - What if $\sigma$ were the identity function, $\sigma(x)=x$ ?
+
+{{< katex >}}
 $$
 \begin{aligned}
 \frac{\partial \boldsymbol{h}^{(t)}}{\partial \boldsymbol{h}^{(t-1)}} & =\operatorname{diag}\left(\sigma^{\prime}\left(\boldsymbol{W}_h \boldsymbol{h}^{(t-1)}+\boldsymbol{W}_x \boldsymbol{x}^{(t)}+\boldsymbol{b}_1\right)\right) \boldsymbol{W}_h \\
 & =\boldsymbol{I} \boldsymbol{W}_h=\boldsymbol{W}_h
 \end{aligned}
 $$
+{{< /katex >}}
+
 - Consider the gradient of the loss $J^{(i)}(\theta)$ on step $i$, with respect to the hidden state $\boldsymbol{h}^{(j)}$ on some previous step $j$. Let $\ell=i-j$
+
+{{< katex >}}
 $$
 \begin{aligned}
 & \frac{\partial J^{(i)}(\theta)}{\partial \boldsymbol{h}^{(j)}}= \frac{\partial J^{(i)}(\theta)}{\partial \boldsymbol{h}^{(i)}} \prod_{j<t \leq i} \frac{\partial \boldsymbol{h}^{(t)}}{\partial \boldsymbol{h}^{(t-1)}} \\
 &=\frac{\partial J^{(i)}(\theta)}{\partial \boldsymbol{h}^{(i)}} \prod_{j<t \leq i} W_h=\frac{\partial J^{(i)}(\theta)}{\partial \boldsymbol{h}^{(i)}} \prod_h \quad \text { (chain rule) }
 \end{aligned}
 $$
+{{< /katex >}}
+
 If $W_h$ is "small", then this term gets exponentially problematic as $\ell$ becomes large.
 
 ![alt text](/Photos/Screenshot%202023-10-12%20at%2011.46.57.png)
@@ -296,7 +307,7 @@ The key to LSTMs is the cell state, the horizontal line running through the top 
 
 The cell state is kind of like a conveyor belt. It runs straight down the entire chain, with only some minor linear interactions. It’s very easy for information to just flow along it unchanged.
 
-![alt text](/Photos/LSTM3-C-line 1.png)
+![alt text](/Photos/LSTM3-C-line%201.png)
 <!-- ![[../Photos/LSTM3-C-line 1.png]] -->
 The LSTM does have the ability to remove or add information to the cell state, carefully regulated by structures called gates.
 
