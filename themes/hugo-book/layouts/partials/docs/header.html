@@ -10,4 +10,10 @@
     <img src="{{ "svg/toc.svg" | relURL }}" class="book-icon" alt="Table of Contents" />
     {{ end }}
   </label>
+  {{ if (eq $.Page.Params.math "katex") }}
+  {{ partial "helpers/katex.html" . }}
+  {{ else if (eq $.Page.Params.math "mathjax") }}
+    {{ partial "helpers/mathjax.html" . }}
+  {{ end }}
 </div>
+

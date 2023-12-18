@@ -1,8 +1,11 @@
 ---
-title: "Rnn"
+title: "Recurrent Neural Network"
 date: 2023-12-17T17:21:05+01:00
 # bookComments: false
 # bookSearchExclude: false
+math: katex
+markup:
+  defaultMarkdownHandler: goldmark
 ---
 
 # Recurrent Neural Network
@@ -23,14 +26,15 @@ Recurrent Neural Network is here to deal with this issue, it can deal with the s
 # Notation
 
  Inputs:
- - {{</* katex [display] [class="text-center"] */>}}
-\mathbf{x}^{\langle t\rangle}$ : input vector $\mathbf{x}$ at time $t$ (of dimension $n^{[0]}
-{{</* /katex */>}}
- - $\left\{\mathbf{x}^{\langle 1\rangle}, \mathbf{x}^{\langle 2\rangle}, \ldots, \mathbf{x}^{\left\langle T_x\right\rangle}\right\}$ : a sequence of inputs of length $T_x$
+
+ - {{< katex >}} $\mathbf{x}^{\langle t\rangle}$ : input vector $\mathbf{x}$ at time $t$ (of dimension $n^{[0]}$ ) {{< /katex >}}
+
+ - {{< katex >}}$ \left\{\mathbf{x}^{\langle 1\rangle}, \mathbf{x}^{\langle 2\rangle}, \ldots, \mathbf{x}^{\left\langle T_x\right\rangle}\right\} $ : a sequence of inputs of length $T_x$ {{< /katex >}}
  
+
  Outputs:
- - $\mathbf{y}^{\langle t\rangle}$ : output vector $\mathbf{y}$ at time $t$
- - $\left\{\mathbf{y}^{\langle 1\rangle}, \mathbf{y}^{\langle 2\rangle}, \ldots, \mathbf{y}^{\left\langle T_y\right\rangle}\right\}$ : a sequence of outputs of length $T_y$
+ -  {{< katex >}}$\mathbf{y}^{\langle t\rangle}$ : output vector $\mathbf{y}$ at time $t$ {{< /katex >}}
+ -  {{< katex >}}$\left\{\mathbf{y}^{\langle 1\rangle}, \mathbf{y}^{\langle 2\rangle}, \ldots, \mathbf{y}^{\left\langle T_y\right\rangle}\right\}$ : a sequence of outputs of length $T_y$ {{< /katex >}}
 
 ==One thing to note here is that the length of the input and output sequence could be different. ==
 ## Type of RNN
@@ -40,19 +44,21 @@ Recurrent Neural Network is here to deal with this issue, it can deal with the s
 If $T_x = T_y$ the input sequence and output sequence have the same length. For example, the problem of Name Entity Relation, which we try to define type of words in a sentence. 
 
 | Input $\underline{x}$ | Output $\underline{y}$ | Type | Examples |
-| : ---| :--- | :--- | :--- |
+| :--- | :--- | :--- | :--- |
 | sequence $T_x1$ | sequence $T_y=T_x$ | Many-To-Many | Named entity recognition |
 
-![[../Photos/Screenshot 2023-10-04 at 20.26.28.png | This is the caption]]
+![Alt text](/Photos/rnn1.png)
+<!-- ![[./Photos/Screenshot 2023-10-04 at 20.26.28.png | This is the caption]] -->
 
-### Many to One: $T_x1, T_y =1$
+### Many to One: $T_x=1, T_y =1$
 
 
 | Input $\underline{x}$ | Output $\underline{y}$ | Type | Examples |
 | :--- | :--- | :--- | :--- |
-| sequence $T_x1$ | single $T_y=1$ | Many-To-One | $\begin{array}{l}\text { Sentiment analysis, Video activity de- } \\\text { tection }\end{array}$ |
+| sequence $T_x = 1$ | single $T_y=1$ | Many-To-One | Sentiment analysis, Video activity detection |
 
-![[../Photos/Screenshot 2023-10-04 at 20.31.02.png]]
+![Alt text](/Photos/rnn2.png)
+<!-- ![[../Photos/Screenshot 2023-10-04 at 20.31.02.png]] -->
 
 **Example**: Sentiment Analysis that takes a document as an input and give the sentiment as the result.
 
@@ -62,6 +68,9 @@ If $T_x = T_y$ the input sequence and output sequence have the same length. For 
 | Input $\underline{x}$ | Output $\underline{y}$ | Type | Examples |
 | :--- | :--- | :--- | :--- |
 | single $T_x=1$ | sequence, $T_y1$ | One-To-Many | Text generation, music generation |
+
+![Alt text](/Photos/rnn2_2.png)
+
 ![[../Photos/Screenshot 2023-10-04 at 20.33.18.png]]
 
 ### Many to Many $T_x \neq T_y$ 
@@ -70,7 +79,8 @@ If $T_x = T_y$ the input sequence and output sequence have the same length. For 
 |:--------------------------------- |:---------------------------------- |:------------ |:------------------------------------------------------------------------------------------------------ |
 | sequence $T_x1$                  | sequence $T_y1, T_y \neq T_x$     | Many-To-Many | $\begin{array}{l}\text { Automatic Speech Recognition, Ma- } \\\text { chine translation }\end{array}$ |
 
-![[../Photos/Screenshot 2023-10-04 at 20.35.24.png]]
+![Alt text](/Photos/rnn3.png)
+<!-- ![[../Photos/Screenshot 2023-10-04 at 20.35.24.png]] -->
 
 **Example:** DeepL Translator.
 
@@ -103,7 +113,8 @@ If $T_x = T_y$ the input sequence and output sequence have the same length. For 
 
 Basically, a RNN is a neural network with a roll inside or loop inside. 
 
-![[../Photos/Screenshot 2023-10-04 at 20.38.28.png]]
+![Alt text](/Photos/rnn4.png)
+<!-- ![[../Photos/Screenshot 2023-10-04 at 20.38.28.png]] -->
 Source: http://colah.github.io/posts/2015-08-Understanding-LSTMs/
 
 The RNN is simply the neural network but for each step $t0$, it takes the information from the previous step to generate a result at the current step. 
@@ -115,10 +126,11 @@ There are three different weight inside this RNN,
 - $\mathbf{W}_{y a}$ from $\mathbf{a}^{\langle t\rangle} \rightarrow \mathbf{y}^{\langle t\rangle}$
 We can see those weights as below:
 
-![[../Photos/Screenshot 2023-10-04 at 20.41.36.png]]
+![Alt text](/Photos/rnn5.png)
+<!-- ![[../Photos/Screenshot 2023-10-04 at 20.41.36.png]] -->
 
 We can see that $W_{aa}$ is actually the same across all the steps, it is a shared weight inside the loop. 
-Where _$a^{<t} = g_1(W_{aa}a^{<t-1}+W_{ax}x^{<t}+b_a)$_ which means the information that is sent to the current step come from the information that the previous step received from the previous-previous step and the input at the previous step.
+Where $a^{<t} = g_1(W_{aa}a^{<t-1}+W_{ax}x^{<t}+b_a)$ which means the information that is sent to the current step come from the information that the previous step received from the previous-previous step and the input at the previous step.
 
   Result of each timestep
 The result of each step is obtained by: $\hat{\mathbf{y}}^{\langle t\rangle}=g_2\left(\mathbf{W}_{y a} \mathbf{a}^{\langle t\rangle}+\mathbf{b}_y\right)$
@@ -127,15 +139,15 @@ The result of each step is obtained by: $\hat{\mathbf{y}}^{\langle t\rangle}=g_2
 
 ## Standard RNN
 
-
-![[../Photos/Screenshot 2023-10-04 at 20.51.21.png]]
+![Alt text](/Photos/rnn7.png)
+<!-- ![[../Photos/Screenshot 2023-10-04 at 20.51.21.png]] -->
 A standard RNN will read the input from the left to right. 
 But what will the RNN do if we want to predict the first word of the sentence, the RNN has no context of the full sentence how can it generates the correct result? - **Bi-directional RNN**.
 
 ## Bi-directional RNN
 
-
-![[../Photos/Screenshot 2023-10-04 at 20.50.47.png]]
+![Alt text](/Photos/rnn6.png)
+<!-- ![[../Photos/Screenshot 2023-10-04 at 20.50.47.png]] -->
 
 This RNN simply reads the input from the left to right and from the right to left and the prediction is done from the concatenation of $\overrightarrow{a}^{\langle t\rangle}$ and $\overleftarrow{a}^{\langle t\rangle}$ which is given by the following formula:
 
@@ -144,10 +156,11 @@ $$\hat{y}^{\langle t\rangle}=g\left(W_y\left[\vec{a}^{\langle t\rangle}, \overle
 
 Bi-directional RNN can be explained as below:
 
-![[../Photos/Screenshot 2023-10-12 at 11.54.46.png | center | 500]]
+![Alt text](/Photos/rnn8.png)
+<!-- ![[../Photos/Screenshot 2023-10-12 at 11.54.46.png | center | 500]] -->
 
-
-![[../Photos/Screenshot 2023-10-12 at 11.55.34.png |center | 500]]
+![Alt text](/Photos/rnn9.png)
+<!-- ![[../Photos/Screenshot 2023-10-12 at 11.55.34.png |center | 500]] -->
 
 Limitation of Bidirectional RNN
 - Note: bidirectional RNNs are only applicable if you have access to the entire input sequence
@@ -157,8 +170,9 @@ Limitation of Bidirectional RNN
 
 ## Deep-RNN or Multi-Layer RNN or Stacked RNN
 
+![Alt text](/Photos/rnn10.png)
 
-![[../Photos/Screenshot 2023-10-04 at 20.54.49.png|center | 500]]
+<!-- ![[../Photos/Screenshot 2023-10-04 at 20.54.49.png|center | 500]] -->
 
 - For the layer [1], the inputs of the cell at time $\langle t\rangle$ are
 	- the input at the current time $\langle t\rangle: x^{\langle t\rangle}=\mathbf{a}^{[0]\langle t\rangle}$
@@ -179,7 +193,8 @@ Limitation of Bidirectional RNN
 - Transformer-based networks (e.g., BERT) are usually deeper, like 12 or 24 layers.
 # Back Propagation Through Time (BPTT)
 
-![[../Photos/Screenshot 2023-10-04 at 20.56.47.png  |center | 500]]
+![Alt text](/Photos/rnn10.png)
+<!-- ![[../Photos/Screenshot 2023-10-04 at 20.56.47.png  |center | 500]] -->
 
 We can clearly see the problem here during the back-propagation through time of a RNN which is the **vanishing** and **exploding** gradients. 
 Observing the formula:
@@ -210,7 +225,9 @@ $$
 	- we can clip only the norm of the part which causes the problem
 	- we choose the threshold manually: start with a large threshold and then reduce it.
 **Pseudo code**
-![[../Photos/Screenshot 2023-10-12 at 12.07.44.png|center | 300]]
+
+![Alt text](/Photos/rnn12.png)
+<!-- ![[../Photos/Screenshot 2023-10-12 at 12.07.44.png|center | 300]] -->
 
 2. **Truncated BPTT**
 - Training very long sequences
@@ -227,13 +244,17 @@ $$
 **How to deal with vanishing gradient?**
 In RNN, at each step, we multiply the Jacobian matrix which leads to vanishing gradient if we have a long dependencies.
 **Solution**: add a short-cuts between hidden states that are separated by more than one step.
-![[../Photos/Screenshot 2023-10-04 at 21.10.57.png|center | 500]]
+![Alt text](/Photos/rnn13.png)
+<!-- ![[../Photos/Screenshot 2023-10-04 at 21.10.57.png|center | 500]] -->
 - Back-propagation through the shortcuts: the gradients vanish slower
 	- we can learn long-term dependencies
 
 ### Vanishing gradient intuition (Stanford Slides):
 
-![[../Photos/Screenshot 2023-10-12 at 11.38.18.png |center| 500]]
+![Alt text](/Photos/rnn14.png)
+<!-- ![[../Photos/Screenshot 2023-10-12 at 11.38.18.png |center| 500]] -->
+
+
 **Vanishing gradient proof sketch (linear case)**
 - Recall:
 $$
@@ -254,24 +275,29 @@ $$
 \end{aligned}
 $$
 If $W_h$ is "small", then this term gets exponentially problematic as $\ell$ becomes large.
-![[../Photos/Screenshot 2023-10-12 at 11.46.57.png |center| 500]]
+
+![alt text](/Photos/Screenshot%202023-10-12%20at%2011.46.57.png)
+<!-- ![[../Photos/Screenshot 2023-10-12 at 11.46.57.png |center| 500]] -->
 # LSTM and GRU
 
 
 Long Short Term Memory networks – usually just called “LSTMs” – are a special kind of RNN, capable of learning long-term dependencies. They were introduced by [Hochreiter & Schmidhuber (1997)](http://www.bioinf.jku.at/publications/older/2604.pdf), and were refined and popularized by many people in following work.[1](http://colah.github.io/posts/2015-08-Understanding-LSTMs/#fn1) They work tremendously well on a large variety of problems, and are now widely used.
 LSTMs are explicitly designed to avoid the long-term dependency problem. Remembering information for long periods of time is practically their default behavior, not something they struggle to learn!
 All recurrent neural networks have the form of a chain of repeating modules of neural network. In standard RNNs, this repeating module will have a very simple structure, such as a single tanh layer.
-![[../Photos/LSTM3-SimpleRNN 1.png |center| 500]]
+![alt text](/Photos/LSTM3-SimpleRNN%201.png)
+<!-- ![[../Photos/LSTM3-SimpleRNN 1.png |center| 500]] -->
 LSTMs also have this chain like structure, but the repeating module has a different structure. Instead of having a single neural network layer, there are four, interacting in a very special way.
-
-![[../Photos/LSTM3-chain.png |center| 500]]
+![alt text](/Photos/LSTM3-chain.png)
+<!-- ![[../Photos/LSTM3-chain.png |center| 500]] -->
 
 ## The Core Idea Behind LSTMs
 
 The key to LSTMs is the cell state, the horizontal line running through the top of the diagram.
 
 The cell state is kind of like a conveyor belt. It runs straight down the entire chain, with only some minor linear interactions. It’s very easy for information to just flow along it unchanged.
-![[../Photos/LSTM3-C-line 1.png]]
+
+![alt text](/Photos/LSTM3-C-line 1.png)
+<!-- ![[../Photos/LSTM3-C-line 1.png]] -->
 The LSTM does have the ability to remove or add information to the cell state, carefully regulated by structures called gates.
 
 Gates are a way to optionally let information through. They are composed out of a sigmoid neural net layer and a pointwise multiplication operation.
@@ -291,8 +317,8 @@ The first step in our LSTM is to decide what information we’re going to throw 
 	- The cell state might embed the gender of the present subject :
 	- keep it to predict the correct pronouns,
 	- or forget it, when a new subject appears
-
-![[../Photos/LSTM3-focus-f 1.png]]
+![alt text](/Photos/LSTM3-focus-f%201.png)
+<!-- ![[../Photos/LSTM3-focus-f 1.png]] -->
 
 The next step is to decide what new information we're going to store in the cell state. This has two parts. First, a sigmoid layer called the "input gate layer" decides which values we'll update. Next, a tanh layer creates a vector of new candidate values, $\tilde{C_t}$, that could be added to the state. In the next step, we'll combine these two to create an update to the state.
 
@@ -302,8 +328,8 @@ The next step is to decide what new information we're going to store in the cell
 - **Intuition for language modelling**
 	- Add the gender of the new subject to the cell state,
 	- to replace the old one we're forgetting.
-
-![[../Photos/LSTM3-focus-i 1.png]]
+![alt text](/Photos/LSTM3-focus-i%201.png)
+<!-- ![[../Photos/LSTM3-focus-i 1.png]] -->
 
 It's now time to update the old cell state, $C_{t-1}$, into the new cell state $C_t$. The previous steps already decided what to do, we just need to actually do it.
 
@@ -314,7 +340,9 @@ We multiply the old state by $f_t$, forgetting the things we decided to forget e
 - **Intuition for language modelling**
 	- Decide to drop the information about the old subject
 	- Refresh the memory
-![[../Photos/LSTM3-focus-C 1.png]]
+
+![alt text](/Photos/LSTM3-focus-C%201.png)
+<!-- ![[../Photos/LSTM3-focus-C 1.png]] -->
 
 Finally, we need to decide what we're going to output. This output will be based on our cell state, but will be a filtered version. First, we run a sigmoid layer which decides what parts of the cell state we're going to output. Then, we put the cell state through tanh (to push the values to be between -1 and 1 ) and multiply it by the output of the sigmoid gate, so that we only output the parts we decided to.
 
@@ -324,19 +352,21 @@ Finally, we need to decide what we're going to output. This output will be based
 - **Intuition for language modelling**
 	- Since we just saw a subject,
 	- output the relevant information for the future (gender, number)
-![[../Photos/LSTM3-focus-o 1.png]]
+![alt text](/Photos/LSTM3-focus-o%201.png)
+<!-- ![[../Photos/LSTM3-focus-o 1.png]] -->
 
 ## Recap LSTM:
-
-![[../Photos/Screenshot 2023-10-12 at 11.49.03.png |center| 500]]
-![[../Photos/Screenshot 2023-10-12 at 11.50.37.png]]
+![alt text](/Photos/Screenshot%202023-10-12%20at%2011.49.03.png)
+<!-- ![[../Photos/Screenshot 2023-10-12 at 11.49.03.png |center| 500]] -->
+![alt text](/Photos/Screenshot%202023-10-12%20at%2011.50.37.png)
+<!-- ![[../Photos/Screenshot 2023-10-12 at 11.50.37.png]] -->
 
 ## GRU (Gated Recurrent Unit)
 
 A slightly more dramatic variation on the LSTM is the Gated Recurrent Unit, or GRU, introduced by [Cho, et al. (2014)](http://arxiv.org/pdf/1406.1078v3.pdf). It combines the forget and input gates into a single “update gate.” It also merges the cell state and hidden state, and makes some other changes. The resulting model is simpler than standard LSTM models, and has been growing increasingly popular.
 
-
-![[../Photos/LSTM3-var-GRU.png]]
+![alt text](/Photos/LSTM3-var-GRU.png)
+<!-- ![[../Photos/LSTM3-var-GRU.png]] -->
 
 
 # Application
@@ -376,7 +406,9 @@ $$
 	- Start with empty context, empty input word
 	- Given the previous word as input $x^{\langle t \rangle}$ and the context (given by the hidden state cell $a^{\langle t\rangle}$) predict (maximise the probability to observe) the next word $y^{\langle t\rangle}$ as output $\hat{y}^{\langle t\rangle}$
 - **Example**
- ![[../Photos/Screenshot 2023-10-05 at 09.35.14.png]]
+![alt text](/Photos/Screenshot%202023-10-05%20at%2009.35.14.png)
+
+<!-- ![[../Photos/Screenshot 2023-10-05 at 09.35.14.png]] -->
  Sentence = "French people work an average of 35 hours a week".
 
 - **Training**
@@ -396,8 +428,8 @@ p\left(y^{\langle 1\rangle}, y^{\langle 2\rangle}, y^{\langle 3\rangle}\right)= 
 \end{aligned}
 $$
 ###### Sampling novel sequences using RNN
-
-![[../Photos/Screenshot 2023-10-05 at 09.40.04.png]]
+![alt text](/Photos/Screenshot%202023-10-05%20at%2009.40.04.png)
+<!-- ![[../Photos/Screenshot 2023-10-05 at 09.40.04.png]] -->
 So, here basically we use the shared weight from the training to generate a novel sequence.
 
 ##### One-Hot Encoding
@@ -482,20 +514,21 @@ Each word is now associated with an ID.
 	- We can predict, boat and plane in the above example.
 ##### Word embedding / Matrix
 ---
-
-![[../Photos/Screenshot 2023-10-05 at 10.10.09.png |center]]
+![alt text](/Photos/Screenshot%202023-10-05%20at%2010.10.09.png)
+<!-- ![[../Photos/Screenshot 2023-10-05 at 10.10.09.png |center]] -->
 
 ##### Word embedding/ Classic neural language model
 ---
 - **Method**: build a language model (learn to predict the following word) using a MLP
 	- Use back-propagation to learn the parameters: $\mathbf{E}, \mathbf{W}^{[1]}, \mathbf{b}^{[1]}, \mathbf{W}^{[2]}, \mathbf{b}^{[2]}$
 	- $\mathbf{E}$ is the embedding matrix
- ![[../Photos/Screenshot 2023-10-05 at 10.12.15.png |center]]
+![alt text](/Photos/Screenshot%202023-10-05%20at%2010.12.15.png)
+ <!-- ![[../Photos/Screenshot 2023-10-05 at 10.12.15.png |center]] -->
 
 ##### Application: Sentiment Classification / Using a simple model
 ---
-
-![[../Photos/Screenshot 2023-10-05 at 10.13.42.png |center]]
+![alt text](/Photos/Screenshot%202023-10-05%20at%2010.53.50.png)
+<!-- ![[../Photos/Screenshot 2023-10-05 at 10.13.42.png |center]] -->
 
 **Does not work for**
 "This movie was completely **lacking** a good script, good actors and a good director"
@@ -503,12 +536,14 @@ Each word is now associated with an ID.
 - The model can not not understand that we means the opposite ("lacking")
 - We need a Sequence model $\Rightarrow R N N$
 
-![[../Photos/Screenshot 2023-10-05 at 10.15.03.png]]
+![alt text](/Photos/Screenshot%202023-10-05%20at%2010.15.03.png)
+<!-- ![[../Photos/Screenshot 2023-10-05 at 10.15.03.png]] -->
 
 ## Sequence to sequence [Sutskever et al., 2014] or Encoder-Decoder [Cho et al., 2014]
 ---
 
-![[../Photos/Screenshot 2023-10-05 at 10.17.00.png]]
+![alt text](/Photos/Screenshot%202023-10-05%20at%2010.17.00.png)
+<!-- ![[../Photos/Screenshot 2023-10-05 at 10.17.00.png]] -->
 seq2seq and encoder-decoder is similar, encoder-decoder uses architecture of seq2seq but it uses a context vector. The context vector is a weighted sum of the encoder's hidden states, and it is used to provide the decoder with information about the entire input sequence. This allows the decoder to generate more accurate and informative output sequences.
 
 **Example: Machine Translation**
@@ -518,10 +553,12 @@ seq2seq and encoder-decoder is similar, encoder-decoder uses architecture of seq
 	- Conditional language model: $p\left(y^{\langle 1\rangle}, \ldots, y^{\left\langle T_y\right\rangle} \mid x^{\langle 1\rangle}, \ldots, x^{\left\langle T_x\right\rangle}\right)$
 	- English sentence: $\left\{x^{\langle 1\rangle}, \ldots, x^{\left\langle T_x\right\rangle}\right\}$
 	- French sentence: $\left\{y^{\langle 1\rangle}, \ldots, y^{\left\langle T_y\right\rangle}\right\}$
-![[../Photos/Screenshot 2023-10-05 at 10.28.01.png]]
+![alt text](/Photos/Screenshot%202023-10-05%20at%2010.28.01.png)
+<!-- ![[../Photos/Screenshot 2023-10-05 at 10.28.01.png]] -->
 ## Neural Machine Translation (NMT) (Standford Slides)
 ---
-![[../Photos/Screenshot 2023-10-12 at 12.02.12.png |center| 500]]
+![alt text](/Photos/Screenshot%202023-10-12%20at%2012.02.12.png)
+<!-- ![[../Photos/Screenshot 2023-10-12 at 12.02.12.png |center| 500]] -->
 - The general notion here is an **encoder-decoder** model
 	- One neural network takes input and produces a neural representation
 	- Another network produces output based on that neural representation
@@ -537,14 +574,15 @@ seq2seq and encoder-decoder is similar, encoder-decoder uses architecture of seq
 ---
 #### Problem of long sequences
 ---
-![[../Photos/Screenshot 2023-10-05 at 10.29.53.png]]
+![alt text](/Photos/Screenshot%202023-10-05%20at%2010.29.53.png)
+<!-- ![[../Photos/Screenshot 2023-10-05 at 10.29.53.png]] -->
 - **Encoder/Decoder:**
 	- $a^{\left\langle T_x\right\rangle}$ is supposed to memorise the whole sentence then translate it;
 	- human way: translate each part of a sentence at a time
 - **Attention model?** (modification of the Encoder/Decoder)
 	- $a^{\left\langle T_x\right\rangle}$ is replaced by a local version in the encoder $\Rightarrow$ we pay attention on specific encoding!
-
-![[../Photos/Screenshot 2023-10-05 at 10.32.55.png]]
+![alt text](/Photos/Screenshot%202023-10-05%20at%2010.32.55.png)
+<!-- ![[../Photos/Screenshot 2023-10-05 at 10.32.55.png]] -->
 - In attention model:
 	- each decoding time $\tau$ has its own context: $c^{\langle\tau\rangle}$
 	- the context $c^{\langle\tau\rangle}$ is computed as a weighted sum of the encoding hidden states $a^{\langle t\rangle}$
@@ -586,8 +624,10 @@ $$
 - Difference between self-attention and attention is that:
 	- Attention allows the process to look at the specific position in the sequence
 	- self-attention allows the process to look at any position in the sequence.
-- ![[../Photos/Screenshot 2023-10-05 at 10.47.59.png]]
-- ![[../Photos/Screenshot 2023-10-05 at 10.48.27.png]]
+- ![alt text](/Photos/Screenshot%202023-10-05%20at%2010.47.59.png)
+- ![alt text](/Photos/Screenshot%202023-10-05%20at%2010.48.27.png)
+<!-- - ![[../Photos/Screenshot 2023-10-05 at 10.47.59.png]]
+- ![[../Photos/Screenshot 2023-10-05 at 10.48.27.png]] -->
 ##### Implementation:
 ---
 1. First step :
@@ -597,8 +637,10 @@ $$
 	- a Value vector $v_i$
 - the vectors are created by multiplying the input by three matrices $W^Q, W^K, W^V$ that are trained during the training process
 - the new vectors are smaller in dimension than the embedding vector
-- ![[../Photos/Screenshot 2023-10-05 at 10.53.50.png]]
-![[../Photos/Screenshot 2023-10-05 at 10.49.02.png | 400]]
+- ![alt text](/Photos/Screenshot%202023-10-05%20at%2010.53.50.png)
+<!-- - ![[../Photos/Screenshot 2023-10-05 at 10.53.50.png]] -->
+![alt text](/Photos/Screenshot%202023-10-05%20at%2010.49.02.png)
+<!-- ![[../Photos/Screenshot 2023-10-05 at 10.49.02.png | 400]] -->
 2. **Second step : calculate a score**
 - The score determines how much focus to place on other parts of the input sentence as we encode a word at a certain position.
 - Example : calculate self-attention for the first word "Thinking" $\Rightarrow$ we score each word of the input sentence against this word
@@ -612,12 +654,14 @@ $$
 	- keep intact the values of the word(s) we want to focus on, and drown-out irrelevant words
 - sum up the weighted value vectors
 	- produces the output $z_i$ of the self-attention layer at this position (for the first word).
+![alt text](/Photos/Screenshot%202023-10-05%20at%2010.56.50.png)
 
-![[../Photos/Screenshot 2023-10-05 at 10.56.50.png]]
+<!-- ![[../Photos/Screenshot 2023-10-05 at 10.56.50.png]] -->
 
 #### Transformer Architecture
 ---
-![[../Photos/Screenshot 2023-10-05 at 10.59.34.png]]
+![alt text](/Photos/Screenshot%202023-10-05%20at%2010.59.34.png)
+<!-- ![[../Photos/Screenshot 2023-10-05 at 10.59.34.png]] -->
 - Bottom input
 	- each input word is turned into a vector using an embedding algorithm (only happens in the bottom-most encoder)
 - Each encoder block:
@@ -628,8 +672,9 @@ $$
 		- then into a feed-forward neural network,
 			- does not have those dependencies and thus can be process the various steps in parallel while flowing through the feed-forward layer
 		- then sends out the output upwards to the next encoder block
-	
-	![[../Photos/Screenshot 2023-10-05 at 11.01.13.png]]
+			
+	![alt text](/Photos/Screenshot%202023-10-05%20at%2011.01.13.png)
+	<!-- ![[../Photos/Screenshot 2023-10-05 at 11.01.13.png]] -->
 **- Residuals + Normalisation**
 	- each sub-layer (self-attention, feedforward) in each encoder has
 		- a residual connection around it
@@ -644,8 +689,8 @@ $$
 	- but also an Attention layer between the encoder and decoder
 		- helps the decoder focus on relevant parts of the input sentence
 		- similar what attention does in Seq2Seq models
-	
-	![[../Photos/Screenshot 2023-10-05 at 11.10.00.png]]
+	![alt text](/Photos/Screenshot%202023-10-05%20at%2011.10.00.png)
+	<!-- ![[../Photos/Screenshot 2023-10-05 at 11.10.00.png]] -->
 
 - Decoder side
 	- The output of the top encoder is then transformed into a set of attention vectors $\mathrm{K}$ and $\mathrm{V}$
@@ -658,5 +703,7 @@ $$
 - Representing The Order of The Sequence Using Positional Encoding
 	- Find a way to account for the order of the words in the input sequence
 		- Transformer adds a vector to each input embedding
-		- These vectors follow a specific pattern that the model learns, which helps it determine the position of each word, or the distance between different words in the sequence![[../Photos/Screenshot 2023-10-05 at 11.12.32.png]]
+		- These vectors follow a specific pattern that the model learns, which helps it determine the position of each word, or the distance between different words in the sequence
+		![alt text](/Photos/Screenshot%202023-10-05%20at%2011.12.32.png)
+		<!-- ![[../Photos/Screenshot 2023-10-05 at 11.12.32.png]] -->
 
