@@ -616,6 +616,7 @@ $$
 		- In this case, the hidden state $a^{\langle t\rangle}$ is the key $k^{\langle t\rangle}$![[../Photos/Screenshot 2023-10-05 at 10.43.48.png]]
 ## Transformer
 ---
+
 ### Self-Attention
 ---
 - Self-Attention?
