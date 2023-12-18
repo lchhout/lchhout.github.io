@@ -2,3 +2,4 @@ baseURL = "https://example.org"
 languageCode = 'en-us'
 title = 'lchhout-blog'
 theme = 'hugo-book'
+canonifyURLs = true
