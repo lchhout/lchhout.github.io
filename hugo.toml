@@ -1,5 +1,6 @@
 baseURL = "https://example.org"
 languageCode = 'en-us'
-title = 'lchhout-blog'
-theme = 'hugo-book'
+title = 'Laychiva Chhout'
+theme = 'hugo-theme-stack'
 canonifyURLs = true
+

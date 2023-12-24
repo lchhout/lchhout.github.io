@@ -1,2 +1,2 @@
-theme = "hugo-book"
+theme = "hugo-theme-stack"
 canonifyURLs = true
