@@ -46,18 +46,17 @@ The Feed Forward Neural Network or Deep Feed Forward Neural Network can not do t
 Recurrent Neural Network is here to deal with this issue, it can deal with the sequential data and remember the all the previous steps to produce the result. In order to do so, RNN has it inner memory or we call it loops or folds. 
 # Notation
 
- Inputs:
+Inputs:
 
- - $\mathbf{x}^{\langle t\rangle}$ : input vector $\mathbf{x}$ at time $t$ (of dimension $n^{[0]}$ ) 
+- $\mathbf{x}^{\langle t\rangle}$ : input vector $\mathbf{x}$ at time $t$ (of dimension $n^{[0]}$) 
+- $\mathbf{x}^{\langle 1\rangle}, \mathbf{x}^{\langle 2\rangle}, \ldots, \mathbf{x}^{\left\langle T_x\right\rangle}$ : a sequence of inputs of length $T_x$ 
 
- - $ \left\{\mathbf{x}^{\langle 1\rangle}, \mathbf{x}^{\langle 2\rangle}, \ldots, \mathbf{x}^{\left\langle T_x\right\rangle}\right\} $ : a sequence of inputs of length $T_x$ 
- 
+Outputs:
+- $\mathbf{y}^{\langle t\rangle}$ : output vector $\mathbf{y}$ at time $t$ 
 
- Outputs:
- - $\mathbf{y}^{\langle t\rangle}$ : output vector $\mathbf{y}$ at time $t$ 
- - $\left\{\mathbf{y}^{\langle 1\rangle}, \mathbf{y}^{\langle 2\rangle}, \ldots, \mathbf{y}^{\left\langle T_y\right\rangle}\right\}$ : a sequence of outputs of length $T_y$ 
+- $\mathbf{y}^{\langle 1\rangle}, \mathbf{y}^{\langle 2\rangle}, \ldots, \mathbf{y}^{\left\langle T_y\right\rangle}$ : a sequence of outputs of length $T_y$ 
 
-==One thing to note here is that the length of the input and output sequence could be different. ==
+One thing to note here is that the length of the input and output sequence could be different.
 ## Type of RNN
 
 ### Many to Many $T_x = T_y$
@@ -92,7 +91,8 @@ If $T_x = T_y$ the input sequence and output sequence have the same length. For 
 
 ![Alt text](/Photos/rnn2_2.png)
 
-<!-- ![[../Photos/Screenshot 2023-10-04 at 20.33.18.png]] -->
+<!-- ![[../Photos/Screenshot 2023-
+10-04 at 20.33.18.png]] -->
 
 ### Many to Many $T_x \neq T_y$ 
 
@@ -111,7 +111,7 @@ If $T_x = T_y$ the input sequence and output sequence have the same length. For 
  Why not using a Multi-Layer-Perceptron?
 
  **Answer**
-- We could indeed represent an input sequence $\left\{\mathbf{x}^{\langle 1\rangle}, \ldots, \mathbf{x}^{\left\langle T_x\right\rangle}\right\}$ as a large-vector of dimension $\left(n^{[0]} T_x\right)$
+- We could indeed represent an input sequence $\mathbf{x}^{\langle 1\rangle}, \ldots, \mathbf{x}^{\left\langle T_x\right\rangle}$ as a large-vector of dimension $\left(n^{[0]} T_x\right)$
 	- it would requires a huge input dimension!
 
  **Problem**
@@ -449,7 +449,7 @@ $$
 \mathscr{L}=\sum_t \mathscr{L}\left(\hat{y}^{\langle t\rangle}, y^{\langle t\rangle}\right) \quad \text { with } \quad \mathscr{L}\left(\hat{y}^{\langle t\rangle}, y^{\langle t\rangle}\right)=-\sum_{c=1}^K y_c^{\langle t\rangle} \log \left(\hat{y}_c^{\langle t\rangle}\right)
 $$
 - **Testing**
-	- Given a new sentence of three words $\left\{y^{\langle 1\rangle}, y^{\langle 2\rangle}, y^{\langle 3\rangle}\right\}$ what is its probability?
+	- Given a new sentence of three words $y^{\langle 1\rangle}, y^{\langle 2\rangle}, y^{\langle 3\rangle}$ what is its probability?
 $$
 \begin{aligned}
 p\left(y^{\langle 1\rangle}, y^{\langle 2\rangle}, y^{\langle 3\rangle}\right)= & p\left(y^{\langle 1\rangle}\right) & & \text { given by the first softmax } \\
@@ -581,8 +581,8 @@ seq2seq and encoder-decoder is similar, encoder-decoder uses architecture of seq
 	- $p\left(y^{\langle 1\rangle}, y^{\langle 2\rangle}, \ldots, y^{\left\langle T_y\right\rangle}\right)$
 - **Machine Translation:**
 	- Conditional language model: $p\left(y^{\langle 1\rangle}, \ldots, y^{\left\langle T_y\right\rangle} \mid x^{\langle 1\rangle}, \ldots, x^{\left\langle T_x\right\rangle}\right)$
-	- English sentence: $\left\{x^{\langle 1\rangle}, \ldots, x^{\left\langle T_x\right\rangle}\right\}$
-	- French sentence: $\left\{y^{\langle 1\rangle}, \ldots, y^{\left\langle T_y\right\rangle}\right\}$
+	- English sentence: $x^{\langle 1\rangle}, \ldots, x^{\left\langle T_x\right\rangle}$
+	- French sentence: $y^{\langle 1\rangle}, \ldots, y^{\left\langle T_y\right\rangle}$
 ![alt text](/Photos/Screenshot%202023-10-05%20at%2010.28.01.png)
 <!-- ![[../Photos/Screenshot 2023-10-05 at 10.28.01.png]] -->
 ## Neural Machine Translation (NMT) (Standford Slides)
