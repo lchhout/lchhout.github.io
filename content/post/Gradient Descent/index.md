@@ -2,7 +2,7 @@
 author = "Laychiva Chhout"
 title = "Gradient Descent"
 date = "2023-12-24"
-description = "Gradient Descent in detail."
+description = "From gradient descent to AdamW."
 math = "true"
 categories = [
     "Artificial Intelligence",
