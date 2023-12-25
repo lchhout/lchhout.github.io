@@ -5,10 +5,9 @@ date = "2023-12-24"
 description = "Recurrent Neural Networks in detail."
 math = "true"
 tags = [
-    "markdown",
-    "css",
-    "html",
-    "themes",
+    "ai",
+    "ml",
+    "dl",
 ]
 categories = [
     "Artificial Intelligence",

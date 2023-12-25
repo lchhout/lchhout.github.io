@@ -4,6 +4,12 @@ title = "Gradient Descent"
 date = "2023-12-24"
 description = "From gradient descent to AdamW."
 math = "true"
+tags = [
+    "ai",
+    "ml",
+    "dl",
+    "optimisation"
+]
 categories = [
     "Artificial Intelligence",
     "Deep Learning",

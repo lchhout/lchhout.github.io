@@ -1,7 +1,7 @@
 ---
 title: Curriculum Vitae
-description: Laychiva Chhout - AI, Economics and Politics enthusiast.
-date: '2019-02-28'
+description: X-Télécom (4th year student at Ecole Polytechnique and 3rd year student at Télécom Paris, majoring in Data Science and AI.
+date: '2023-12-25'
 aliases:
   - about-us
   - about-hugo
@@ -19,13 +19,11 @@ menu:
 
 <!-- ![Profile Picture](./img/chiva.jpg) -->
 
-Hello! My name is Laychiva Chhout and I am a X-Télécom (4th year student at [École polytechnique](https://www.polytechnique.edu/) and 3rd year student at [Télécom Paris](https://www.telecom-paris.fr)), majoring in Data Science and AI.
-
 <!-- - [Facebook](https://www.facebook.com/laychiva/) -->
 <!-- - [Twitter](https://twitter.com/laychiva) -->
-- [GitHub](https://github.com/Laychiva)
+<!-- - [GitHub](https://github.com/Laychiva) -->
 <!-- - [Instagram](https://www.instagram.com/laychivachhout/) -->
-- [LinkedIn](https://www.linkedin.com/in/laychiva-chhout-0789a41ab/)
+<!-- - [LinkedIn](https://www.linkedin.com/in/laychiva-chhout-0789a41ab/) -->
 
 ### Experience
 
@@ -62,7 +60,7 @@ Foundation years in Mathematics and Physics
 
 ### Skills
 
-| ### Good knowledge      | ### Basic knowledge  |
+| **Good knowledge**      | **Basic knowledge**  |
 | ----------------------- | -------------------- |
 | - Python                | - Hadoop/Spark       |
 | - PyTorch/Keras/TensorFlow | - HTML5/CSS       |

@@ -4,6 +4,11 @@ title = "Regularization"
 date = "2023-12-24"
 description = "Regularization in detail"
 math = "true"
+tags = [
+    "ai",
+    "ml",
+    "dl",
+]
 categories = [
     "Artificial Intelligence",
     "Deep Learning",

@@ -4,7 +4,11 @@ title = "Multi-Layers Perceptron"
 date = "2023-12-24"
 description = "Multi-Layers Perceptron in detail."
 math = "true"
-
+tags = [
+    "ai",
+    "ml",
+    "dl",
+]
 categories = [
     "Artificial Intelligence",
     "Deep Learning",
