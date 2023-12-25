@@ -296,6 +296,19 @@ $$
 - Stabilizing Term $\epsilon$ : A small number like $10^{-8}$, to prevent division by zero.
 - Weight Decay $\lambda$ : Controls the amount of weight decay, applied separately from the gradient update.
 
+**PyTorch code to load different optimizers:**
+
+```python
+import torch.optim as optim
+# Different optimizers
+optimizers = {
+    "SGD": optim.SGD(model.parameters(), lr=0.01),
+    "Adam": optim.Adam(model.parameters(), lr=0.001),
+    "RMSprop": optim.RMSprop(model.parameters(), lr=0.01),
+    "Adagrad": optim.Adagrad(model.parameters(), lr=0.01),
+    "AdamW": optim.AdamW(model.parameters(), lr=0.001),
+}
+```
 
 ### Reference
 

@@ -554,6 +554,67 @@ RELU has advantage and disadvantage:
     $$
 
 
+## MLP in Practice
+
+```python
+import torch
+import torch.nn as nn
+import torch.optim as optim
+
+# Define the neural network
+class MLP(nn.Module):
+    def __init__(self, input_size, hidden_size, num_classes):
+        super(MLP, self).__init__()
+        self.fc1 = nn.Linear(input_size, hidden_size) 
+        self.relu = nn.ReLU()
+        self.fc2 = nn.Linear(hidden_size, hidden_size) 
+        self.fc3 = nn.Linear(hidden_size, num_classes)  
+    
+    def forward(self, x):
+        out = self.fc1(x)
+        out = self.relu(out)
+        out = self.fc2(out)
+        out = self.relu(out)
+        out = self.fc3(out)
+        return out
+
+# Hyperparameters
+input_size = 784  # Example for flattened 28x28 image
+hidden_size = 500
+num_classes = 10
+num_epochs = 5
+batch_size = 100
+learning_rate = 0.001
+
+# Create a model, criterion and optimizer
+model = MLP(input_size, hidden_size, num_classes)
+criterion = nn.CrossEntropyLoss()
+optimizer = torch.optim.Adam(model.parameters(), lr=learning_rate)
+
+# Note: In a real scenario, we load our data here.
+for epoch in range(num_epochs):
+    for i in range(100):  # 100 mini-batches for example
+        # Random tensors for input and output (Replace with real data)
+        inputs = torch.randn(batch_size, input_size)
+        labels = torch.randint(0, num_classes, (batch_size,))
+
+        # Forward pass
+        outputs = model(inputs)
+        loss = criterion(outputs, labels)
+
+        # Backward pass and optimization
+        optimizer.zero_grad()
+        loss.backward()
+        optimizer.step()
+        
+        if (i+1) % 100 == 0:
+            print (f'Epoch [{epoch+1}/{num_epochs}], Step [{i+1}/100], Loss: {loss.item():.4f}')
+
+print("Training complete")
+
+```
+
+
 ## Reference
 
 Lecture slides of Professor: **Geoffroy Peeter, Télécom Paris.**
