@@ -4,6 +4,7 @@ title = "Multi-Layers Perceptron"
 date = "2023-12-24"
 description = "Multi-Layers Perceptron in detail."
 math = "true"
+
 categories = [
     "Artificial Intelligence",
     "Deep Learning",
@@ -551,6 +552,11 @@ RELU has advantage and disadvantage:
     $$
     g^{\prime}(x)=\frac{1}{1+e^{-x}}
     $$
+
+
+## Reference
+
+Lecture slides of Professor: **Geoffroy Peeter, Télécom Paris.**
 
 
 <!-- ![alt text](/MLP/Page66.jpg) -->
