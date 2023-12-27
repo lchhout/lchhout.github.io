@@ -4,7 +4,9 @@ title = "École polytechnique ឬ X"
 date = "2023-12-24"
 description = "ការចែករំលែកពីបទពិសោធន៍ផ្ទាល់ខ្លួនរបស់ខ្ញុំនៅ X"
 math = "true"
-
+tags = [
+    "others",
+]
 categories = [
     "Others"
 ]
