@@ -1,6 +1,6 @@
 +++
 author = "Laychiva Chhout"
-title = "École polytechnique ឬ X"
+title = "École polytechnique(X)"
 date = "2023-12-27"
 description = "ការចែករំលែកពីបទពិសោធន៍ផ្ទាល់ខ្លួនរបស់ខ្ញុំនៅ X"
 math = "true"
@@ -86,8 +86,6 @@ Climbing, Horse riding, Rugby, Volleyball) ដើម្បីហាត់ជា�
 ឆ្នាំទី៤ជាឆ្នាំចុងក្រោយនៃការសិក្សា ដោយសិស្សត្រូវទៅសិក្សានៅសាលាដៃគូរដែលក្នុងនោះមានសាលាល្បីៗតាមជំនាញនីមួយៗនៅក្នុងប្រទេសបារាំង និងប្រទេសផ្សេងៗ ដូចជា Stanford, Princeton, MIT, Oxford, Cambridge, ETH Zurich, Telecom Paris, Ecole des Ponts, ENS, etc. សិស្សត្រូវដាក់ពាក្យស្នើសុំដើម្បីចូលរៀននៅក្នុងសាលាទាំងអស់នេះ ដែលជាទូទៅដើម្បីជាប់បានចូលរៀននៅក្នុងសាលាល្អ លទ្ធផលសិក្សារបស់យើងនៅ X ត្រូវមានលទ្ធផលល្អប្រសើរ។ 
 
 ![ឆ្នាំទី៣ និង ទី៤ នៅ X](3-4-1.png)
-
-
 
 ## Reference
 
