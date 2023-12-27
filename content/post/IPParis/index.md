@@ -1,7 +1,7 @@
 +++
 author = "Laychiva Chhout"
 title = "École polytechnique ឬ X"
-date = "2023-12-24"
+date = "2023-12-27"
 description = "ការចែករំលែកពីបទពិសោធន៍ផ្ទាល់ខ្លួនរបស់ខ្ញុំនៅ X"
 math = "true"
 tags = [
