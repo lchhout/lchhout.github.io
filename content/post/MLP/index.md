@@ -1,8 +1,8 @@
 +++
 author = "Laychiva Chhout"
-title = "Multi-Layers Perceptron"
+title = "Multi-Layer Perceptron"
 date = "2023-12-24"
-description = "Multi-Layers Perceptron in detail."
+description = "Multi-Layer Perceptron in detail."
 math = "true"
 tags = [
     "ai",
