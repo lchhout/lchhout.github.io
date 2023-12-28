@@ -29,7 +29,7 @@ In this blogpost, we will walk through the architecture of seq2seq model.
 
 ## 2. seq2seq [Sutskever et al., 2014]
 
-The seq2seq model is an extension of the encoder-decoder architecture specifically designed to handle sequences of different lengths. In this model, the encoder processes the entire input sequence and compresses the information into a context vector. This context vector encapsulates the essence of the input sequence in a dense representation.
+The seq2seq model is an extension of the encoder-decoder architecture specifically designed to handle sequences of different lengths. In this model, the encoder processes the entire input sequence and compresses the information into a context vector $a^{\langle T_x \rangle}$. This context vector encapsulates the essence of the input sequence in a dense representation.
   
 ![Encoder-Decoder architecture](seq2seq.png)
 
@@ -55,7 +55,18 @@ In this example, the general notion is an encoder-decoder model. If the input an
 
 - **Code generation**: (natural language $\rightarrow$ Python code)
 
-## 4. Reference
+## 4. Problem of seq2seq
+
+The seq2seq or encoder-decoder architecture gives us:
+![seq2seq or encoder-decoder architecture](seq2seq.png)
+**Question**: What is the problem with this architecture?
+
+The seq2seq model relies on $a^{\left\langle T_x\right\rangle}$ to remember an entire sentence before translating it. However, this approach differs from the human method of translating sentence segments individually. This is where the concept of 'Attention' becomes significant, offering a more efficient translation process. We'll explore the Attention mechanism in our upcoming blog post.
+
+
+
+
+## 5. Reference
 
 - Lecture slides of Professor: **Geoffroy Peeter, Télécom Paris.**
 - Lecture slides of stanford university: https://web.stanford.edu/class/cs224n/slides/
