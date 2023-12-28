@@ -84,7 +84,7 @@ $$
 
 So here, the attention distribution is obtained by applying softmax to the attention scores, and these attention scores are derived from the multiplication (or another alignment function) of **query** and **keys**. 
 
-This take away is important because it is a basic notion of the self-attention model that we will go through in the upcoming blogpost. 
+This take away is important because it is a basic notion of the [self-attention](https://lchhout.github.io/blogs/selfattention/) model that we will go through in the upcoming blogpost. 
 
 
 ## Reference
