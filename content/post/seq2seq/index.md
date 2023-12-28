@@ -31,11 +31,7 @@ In this blogpost, we will walk through the architecture of seq2seq model.
 
 The seq2seq model is an extension of the encoder-decoder architecture specifically designed to handle sequences of different lengths. In this model, the encoder processes the entire input sequence and compresses the information into a context vector. This context vector encapsulates the essence of the input sequence in a dense representation.
   
-![Seq2Seq architecture](seq2seq.png)
-
-<!-- ![[../Photos/Screenshot 2023-10-05 at 10.17.00.png]] -->
-
-seq2seq and encoder-decoder is similar, encoder-decoder uses architecture of seq2seq but it uses a context vector. The context vector is a weighted sum of the encoder's hidden states, and it is used to provide the decoder with information about the entire input sequence. This allows the decoder to generate more accurate and informative output sequences.
+![Encoder-Decoder architecture](seq2seq.png)
 
 ## 3. Application of seq2seq
 
