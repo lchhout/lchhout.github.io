@@ -77,6 +77,16 @@ $$
 \left[\boldsymbol{a}_t ; \boldsymbol{s}_t\right] \in \mathbb{R}^{2 h}
 $$
 
+**Note** A few notation and keyword we have to take away:
+
+- **query**: the RNN hidden state $s^{\langle\tau-1\rangle}$ of the output sequence (just before emitting $y^{\langle\tau\rangle}$)
+- **keys**: the RNN hidden states $a^{\langle t\rangle}$ of the input sentence.
+
+So here, the attention distribution is obtained by applying softmax to the attention scores, and these attention scores are derived from the multiplication (or another alignment function) of **query** and **keys**. 
+
+This take away is important because it is a basic notion of the self-attention model that we will go through in the upcoming blogpost. 
+
+
 ## Reference
 
 - Lecture slides of Professor: **Geoffroy Peeter**, **Télécom Paris.**
