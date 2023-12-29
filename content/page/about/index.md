@@ -74,24 +74,19 @@ Foundation years in Mathematics and Physics
 - 🇫🇷 French - Advanced - C1
 
 ### Prize and Award
+- Awarded the "Prix du stage de recherche" by the École polytechnique.
 - Obtained the [Eiffel Excellence Scholarship](https://www.campusfrance.org/en/eiffel-scholarship-program-of-excellence) for 3 years to pursue studies at École Polytechnique
 - 4th place in the mathematics competition and 4th place in the physics competition at ITC
 - Gold medal in mathematics at the mathematics competition at ITC
 - Obtained the baccalaureate with a grade of A, top tenth among all grade 12 students.
 
 ### Projects
-- [École polytechnique](https://www.polytechnique.edu/): Data Challenge "Classification of Human Written Text and AI Generated Text"
-  - [GitHub](https://github.com/Laychiva/Text-Classification)
-- [École polytechnique](https://www.polytechnique.edu/): Data Challenge "Predict the number of retweet of a tweet"
-  - [GitHub](https://github.com/Laychiva/retweettwitter)
-- [École polytechnique](https://www.polytechnique.edu/): Advance Algorithm: "Matching one-to-many under constraints"
-  - [GitHub](https://github.com/Laychiva/AdvanceAlgorithmProject)
-- [École polytechnique](https://www.polytechnique.edu/): Data Challenge "Classification of Forest Type"
-  - [GitHub](https://github.com/Laychiva/Forest-classification)
-- [École polytechnique](https://www.polytechnique.edu/): Collective scientific project
-  - [GitHub](https://github.com/Laychiva/psc.java.autoparallel)
-- [École polytechnique](https://www.polytechnique.edu/): MODAL "Application Web"
-  - [GitHub](https://github.com/liu0080/ModalProject)
+- [École polytechnique](https://www.polytechnique.edu/): Data Challenge "Classification of Human Written Text and AI Generated Text": [GitHub](https://github.com/Laychiva/Text-Classification)
+- [École polytechnique](https://www.polytechnique.edu/): Data Challenge "Predict the number of retweet of a tweet": [GitHub](https://github.com/Laychiva/retweettwitter)
+- [École polytechnique](https://www.polytechnique.edu/): Advance Algorithm: "Matching one-to-many under constraints": [GitHub](https://github.com/Laychiva/AdvanceAlgorithmProject)
+- [École polytechnique](https://www.polytechnique.edu/): Data Challenge "Classification of Forest Type": [GitHub](https://github.com/Laychiva/Forest-classification)
+- [École polytechnique](https://www.polytechnique.edu/): Collective scientific project: [GitHub](https://github.com/Laychiva/psc.java.autoparallel)
+- [École polytechnique](https://www.polytechnique.edu/): MODAL "Application Web": [GitHub](https://github.com/liu0080/ModalProject)
 
 ### Divers
 - Voluntary Works
