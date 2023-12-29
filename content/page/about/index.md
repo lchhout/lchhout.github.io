@@ -27,14 +27,23 @@ menu:
 
 ### Experience
 
+#### October 2023 - Present: [Rexel](https://www.rexel.fr/frx/)
+**Position:** School AI Project
+
+**Tech stack:** Python/Machine Learning/NLP/Deep Learning/PyTorch
+- Led the optimization of Top-k Retrieval using AI, involving a comprehensive research phase to benchmark a spectrum of vector search methods, ranging from classical techniques to those incorporating large language models.
+
 #### March 2023 - September 2023: [amadeus](https://amadeus.com/fr)
-**Position:** AI Engineer Intern
+**Position:** AI Research Engineer Intern
 
 **Tech stack:** Python/Machine Learning/NLP/Docker/Deep Learning/PyTorch
 
 - Intern in a R&D Department
-  - Create a tool for classifying and recommending solutions for problems from airlines or travel companies.
-  - Create an answering engine using LLM.
+  - Developed an advanced tool employing state-of-the-art vector embeddings to classify issues and recommend solutions for airline and travel industry challenges, seamlessly integrating research concepts into practical application.
+  - Designed an answering engine using Large Language Models (LLM) and implemented the Retrieval Augmented Generation (RAG) technique to construct a resource-efficient chatbot.
+  - Participated in Innovation Week and worked on Data Drift to detect data drift in a production environment.
+  - The tool is currently utilized within Amadeus, significantly reducing the workload for maintenance teams.
+  - Awarded the 'Prix du stage de recherche' by École Polytechnique for exceptional research outcomes achieved during the internship.
   - Participate in Innovation Week, working on Data Drift.
 
 #### June 2022 - September 2022: [Paris Partners Software](https://www.parispartners.com)
@@ -48,15 +57,13 @@ menu:
 ### Education
 
 #### 2023-Present: [Télécom Paris](https://www.telecom-paris.fr), Paris, France
-Master of Science in Engineering, majoring in Artificial Intelligence.
+Dual Master's Degree in Engineering, majoring in Artificial Intelligence.
 
 #### 2020-Present: [École polytechnique](https://www.polytechnique.edu/), Paris, France
 Cycle Ingénieur polytechnicien de l’École polytechnique, majoring in Data Science and Artificial Intelligence.
 
 #### 2017-2020: [Institute of Technology of Cambodia](https://itc.edu.kh), Phnom Penh, Cambodia
 Foundation years in Mathematics and Physics
-
-### Skills
 
 ### Skills
 
