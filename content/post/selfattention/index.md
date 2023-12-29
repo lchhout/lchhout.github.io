@@ -303,3 +303,4 @@ $$
 
 - Lecture slides of Professor: **Geoffroy Peeter, Télécom Paris.**
 - Lecture slides of stanford university: https://web.stanford.edu/class/cs224n/slides/
+- All photos and architectures tooks from https://web.stanford.edu/class/cs224n/slides/
