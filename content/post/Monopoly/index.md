@@ -275,6 +275,165 @@ $\rightarrow$ The prospect of monopoly profits could act as an incentive for fir
 $\rightarrow$ Idea of "rent seeking"
 At the extreme, a firm might be willing to spend all of its future monopoly profits to become a monopoly.
 
-## What's Next? 
 
-In the next blogpost, we will talk about the regulation on Monopoly. 
+## 5. Optimal regulation of a monopoly
+
+Optimal regulation of a monopoly revolves around the principle of achieving allocative efficiency in a market, which occurs when every unit of production that yields a positive surplus is actually produced. This essentially means that for any additional unit of production, the consumer's willingness to pay should meet or exceed the marginal cost of producing that unit. The ideal scenario for resource allocation equates to pricing based on marginal cost.
+
+Consider a simple scenario where the cost of production, $C(q)$, is represented as $F+c q$, with $c$ being the marginal cost and $F$ representing fixed costs. In this context, the efficient price, denoted as $p^{\star}$, should ideally be set at $c$, aligning with the marginal cost of production. However, setting the price at this level would result in the monopoly incurring a loss equivalent to its fixed costs, $\pi^{\star}=-F$, highlighting a budget balance issue and rendering optimal regulation unfeasible under these conditions.
+
+One proposed solution to this dilemma is to provide the firm with a subsidy equal to $F$, the fixed costs, to offset the loss incurred at the efficient price. Nonetheless, this approach encounters several challenges. Subsidies might be legally prohibited, and acquiring the necessary funds through taxation introduces its own inefficiencies, potentially outweighing the benefits of correcting the initial inefficiency. Moreover, facilitating a budget transfer from the state to the monopoly raises concerns over "rent-seeking" behavior and the risk of "regulator capture", where the regulatory process is manipulated to benefit the regulated entity at the expense of the public interest. These complexities underscore the challenges in implementing optimal regulation within monopolistic markets, necessitating a careful consideration of the trade-offs involved.
+
+### 5.1. Regulation with a budget balance constraint
+
+In the context of regulating a monopoly under the constraint that the firm maintains a balanced budget, where its profits are non-negative ( $\pi \geq 0$ ), the approach to maximizing social welfare differs based on whether the monopoly offers a single product or multiple products.
+
+For a single-product monopoly, the regulatory solution is relatively straightforward and involves average cost pricing. This method requires the monopolist to set its prices equal to the average total cost of production, ensuring that the firm earns a normal profit. This level of profit is sufficient for the monopoly to cover all its operational costs, including both fixed and variable expenses, thereby allowing it to sustain its business operations. The average total cost is determined by summing all the costs incurred by the monopolist and dividing by the total output. It's important to note that the average total cost generally exceeds the marginal cost of production, reflecting the full cost of producing each unit including the apportioned fixed costs.
+
+When dealing with a multi-product monopoly, the regulatory strategy becomes significantly more complex due to the myriad of possible price and quantity combinations that can yield a non-zero profit for the firm. In this scenario, the optimal pricing strategy is known as **"Ramsey-Boiteux"** pricing. **Ramsey-Boiteux** pricing aims to identify a price structure that minimizes the welfare loss while ensuring the monopoly covers its fixed costs. The prices under this method are set in proportion to, but lower than, the inverse elasticity of demand for each product. This implies charging higher prices for products with less price-sensitive demand (inelastic services), as these products can bear a greater portion of the fixed costs without causing a substantial reduction in quantity demanded. Through this approach, **Ramsey-Boiteux** pricing seeks to distribute the burden of covering fixed costs in a manner that least distorts the market and maximizes social welfare.
+
+
+### 5.2. Alternatives to regulation
+
+The regulation of monopolies, while aimed at ensuring fair prices and preventing abuse of market power, comes with its own set of costs and challenges. These include information asymmetries between the regulator and the firm regarding costs and demand, the direct costs of maintaining a regulatory body (such as staffing and administrative expenses), and the risk of regulatory capture, where the regulatory agency may end up advancing the interests of the industry it is supposed to regulate rather than those of the public.
+
+Given these drawbacks, there are alternative approaches to regulation that can also promote efficient market outcomes and safeguard consumer interests:
+
+1. **Competition à la Demsetz** involves introducing competition through the bidding process for the right to serve a market. Under this approach, rather than regulating a single monopolist, potential service providers compete against each other to win an exclusive contract, usually by offering the lowest prices or the best service terms. This method leverages the competitive pressures of the market to ensure efficient pricing and service quality, reducing the need for direct regulatory oversight.
+2. **Contestable Markets**[Theory of Baumol, Panzar and Willig (1982)] theory suggests that a market can be competitive even if it is served by only one firm, provided there are no significant barriers to entry or exit. If potential competitors can easily enter and exit the market, the threat of potential competition alone can discipline the incumbent firm to behave as if it were in a competitive market, thereby ensuring fair pricing and efficient service provision. This approach reduces the reliance on regulatory interventions by using market mechanisms to self-regulate.
+3. **Intermodal Competition** refers to competition between different types of services that can satisfy the same need. For example, in telecommunications, traditional landline services might face competition from mobile telephony, VoIP, and other communication technologies. This type of competition can provide alternatives to consumers, limit the market power of any single provider, and drive innovation and efficiency in the market.
+
+These alternatives to traditional regulation rely on market forces and competition to achieve desirable outcomes, such as lower prices, higher quality, and innovation, without the direct costs and potential inefficiencies associated with regulatory oversight. However, the effectiveness of these alternatives depends on the specific market conditions, including the presence of low barriers to entry and exit, the feasibility of competition in the market, and the potential for technological innovation to offer new alternatives.
+
+<!-- # Price discrimination
+---
+**Definition of price discrimination**
+The practice of charging different prices for the same good (or similar goods), the selling price depending on: the quantity purchased, the characteristics of the buyer, or other contract terms
+**Examples:**
+- Student price
+- Airline fares ("yield management")
+- Volume discounts ("2nd product offered")
+- Vouchers ...
+
+**Question:** How do we know if there is price discrimination?
+
+## Test
+---
+There is price discrimination if difference in price between two versions of a good cannot be explained by a difference in cost
+**Stigler test (1987):**
+$$
+\frac{p_1}{p_2} \neq \frac{c_1}{c_2}
+$$
+**Philips test (1983):**
+$$
+\left(p_1-c_1\right) \neq\left(p_2-c_2\right)
+$$
+
+## Conditions for price discrimination
+---
+Conditions for price discrimination:
+1. Firms should have market power
+2. Consumers should have different willingness to pay and firms should be able to identify them directly or indirectly (self-selection)
+3. Resale opportunities should be limited
+
+Resale (or arbitrage) is difficult:
+- If the good is a service
+- If the warranty applies only to the buyer
+- If transaction costs are high (storage costs, search costs...)
+- If there is a legal restriction on resale
+
+## Pigou classification
+---
+Pigou (1920) identifies three forms of price discrimination:
+- First degree discrimination (or personalized pricing)
+- Third degree discrimination (or group pricing)
+- Second degree discrimination (or versioning, or menu pricing). Includes volume discounts (and all forms of non-linear pricing)
+
+These three forms of price discrimination require some level of information about consumers, in decreasing order (1st degree $3rd$ degree $2nd$ degree)
+
+### First-degree price discrimination
+---
+**Definition (Tirole, 1988)**
+The producer captures the entire consumer surplus
+
+
+Examples of first-degree price discrimination? $\rightarrow$ Bazaar, fortune teller, Amazon experience (2000)
+- In a bazaar, for example, sellers may negotiate with each customer individually to find the highest price that they are willing to pay for a particular item. This is a common practice in many developing countries, where markets are often less competitive and sellers have more bargaining power.
+- Fortune tellers also often use first-degree price discrimination. They may charge customers different prices based on their perceived income, wealth, or willingness to pay. For example, a fortune teller may charge a wealthy customer more for a reading than they would charge a customer who appears to be less wealthy.
+- Amazon Experience (2000) was a short-lived program that allowed Amazon customers to bid on prices for items. This is a textbook example of first-degree price discrimination, as Amazon was charging each customer the maximum price that they were willing to pay.
+What is the deadweight loss? $\rightarrow$ No deadweight loss...
+**Remark**: If a monopoly implements first-degree price discrimination, allocative efficiency is reached
+
+An example of first-degree price discrimination
+First-degree price discrimination is possible when consumers consume more than one unit of the good or service
+Let's consider a monopoly telecommunication operator
+- All consumers are identical
+- The utility of making $q$ phone calls is $u(q)$
+- The monopoly sets a two-part tariff $T(q)=f+p q$
+- $f=$ subscription, $p=$ price per call (or minute)
+
+What is the optimal price for the monopolist? How can it implement first-degree price discrimination?
+
+1. First step: once a consumer has subscribed to the service, he chooses the number of calls $q$ he wants to make to maximize his net utility, $u(q)-p q$, and obtains the following utility from making this optimal number of calls:
+$$
+v(p)=\max _q\{u(q)-p q\}
+$$
+2. Second step: the monopolist anticipates the consumer's optimal number of calls. It sets the subscription price so that the utility of making calls is higher than the subscription price: $v(p) \geq f$
+3. Third step: let's write $q(p)$ the demand for calls. The monopoly problem is:
+$$
+\underset{p, f}{\max \pi}=(p-c) q(p)+f
+$$
+under the constraint that
+$$
+f \leq v(p)
+$$
+Let's replace $f$ by $v(p)$ and differentiate wrt $p(\mathrm{CPO})$ :
+$$
+q(p)+(p-c) \frac{\partial q(p)}{\partial p}+\underbrace{\frac{\partial v(p)}{\partial p}}_{=-q(p)}=0
+$$
+we have therefore
+$$
+(p-c) \frac{\partial q(p)}{\partial p}=0
+$$
+such that
+$$
+p^*=c
+$$
+**Result**
+ $$
+\text { The optimal price is such that } p^*=c \text { and } f^*=v\left(p^*\right)
+$$
+
+Intuition:
+- The monopoly sets a price for calls that maximizes consumer surplus
+- And extracts all the surplus with the subscription price
+Remark: all consumers pay the same price
+
+### Third-degree price discrimination
+---
+**Definition**
+Third-degree price discrimination occurs when the monopoly sets a different price for each of its customer segments and is able to identify which segment each of its customers belongs to.
+
+Example
+For example, suppose a monopoly operates in different geographical markets The monopoly sets its price in each market so that the marginal revenue is the same in all markets and equal to marginal cost:$$M R_1=M R_2=\cdots=m c$$
+This can be written using the Lerner index:
+$$\frac{p_i-m c}{p_i}=\frac{1}{\epsilon_i}$$
+The price of the good is lower in the market where the demand is the most elastic
+
+### Second-degree price discrimination
+---
+**Definition:** Second-degree price discrimination occurs when the monopoly sets a different price for each of its customer segments and is unable to identify which segment each of its customers belongs to
+
+We also talk about discrimination by self-selection, versioning, or menu pricing.
+Idea:
+- The monopoly cannot identify the customers
+- But it knows the distribution of customer types in the population
+- The monopoly can define an offer to discriminate between the different types of customers
+- How? What constraints should be taken into consideration? -->
+
+
+
+
+
+
+****
