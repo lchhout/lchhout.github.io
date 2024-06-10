@@ -2,7 +2,7 @@
 author = "Laychiva Chhout"
 title = "បញ្ញាសិប្បនិម្មិត - Artificial Intelligence និង ChatGPT"
 date = "2024-06-10"
-description = "ការស្វែងយល់ពីបញ្ញាសិប្បនិម្មិត និង ChatGPT"
+description = "ការឈ្វេងយល់ពីបញ្ញាសិប្បនិម្មិត និង ChatGPT"
 math = "true"
 tags = [
     "ai"
