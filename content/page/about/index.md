@@ -27,7 +27,17 @@ menu:
 
 ### Experience
 
-#### October 2023 - Present: [Rexel](https://www.rexel.fr/frx/)
+#### August 2024 - Present: Social Security Regulator (SSR), Cambodia
+**Position**: ICT Specialist
+
+- Responsible for all ICT-related tasks in Social Security Regulators. 
+
+#### August 2024 - Present: GS-NSPC, Ministry of Economics and Finance, Cambodia
+**Position**: AI Specialist
+
+- Responsible for AI-related tasks in Digital Social Protection.
+
+#### October 2023 - Febraury 2024: [Rexel](https://www.rexel.fr/frx/)
 **Position:** School AI Project
 
 **Tech stack:** Python/Machine Learning/NLP/Deep Learning/PyTorch
